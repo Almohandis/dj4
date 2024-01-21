@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'little_app/app.html' %}
+{% load static %}
+{% load my_extras %}
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+{% endblock %}
+
+{% block body_block %}
+  <p>other page</p>
+  {{ text|cute:'hello' }}<br />
+  {{ number|add:44 }}<br />
+  {{ data }}
+{% endblock %}
